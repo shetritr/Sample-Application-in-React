@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import Route from "react-router-dom/Route";
 import About from "./Abount";
 
+import Navber from "./Navber";
 import Home from "./Home";
 import store from "../store";
 
@@ -13,8 +14,9 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Navber />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/about" component={About} />
           </div>
         </Router>
       </Provider>
