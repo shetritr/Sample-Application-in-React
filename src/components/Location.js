@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-class About extends Component {
+class Location extends Component {
   render() {
     return (
-      <div className="About">
+      <div className="Location">
         <header>
-          <h1>About App</h1>
+          <h1>Location App</h1>
         </header>
       </div>
     );
   }
 }
 
-export default About;
+export default Location;

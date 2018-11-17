@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 import Posts from "./posts";
-import PostForm from "./postform";
+import LocationForm from "./locationform";
 
-class Home extends Component {
+class Category extends Component {
   render() {
     return (
       <div className="App">
@@ -11,7 +11,7 @@ class Home extends Component {
           <header>
             <h1>My App</h1>
           </header>
-          <PostForm />
+          <LocationForm />
           <hr />
           <Posts />
         </div>
@@ -20,4 +20,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Category;

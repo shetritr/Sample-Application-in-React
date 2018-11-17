@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import Route from "react-router-dom/Route";
-import About from "./Abount";
 
 import Navber from "./Navber";
-import Home from "./Home";
+import Location from "./Location";
+import Category from "./Category";
 import store from "../store";
 
 class App extends Component {
@@ -15,8 +15,8 @@ class App extends Component {
         <Router>
           <div>
             <Navber />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/about" component={About} />
+            <Route exact path="/Category" component={Category} />
+            <Route exact path="/Location" component={Location} />
           </div>
         </Router>
       </Provider>
@@ -32,7 +32,7 @@ export default App;
 // import Route from "react-router-dom/Route";
 
 // import Posts from "./posts";
-// import PostForm from "./postform";
+// import locationform from "./locationform";
 
 // import store from "../store";
 
@@ -46,7 +46,7 @@ export default App;
 //               <header>
 //                 <h1>My App</h1>
 //               </header>
-//               <PostForm />
+//               <locationform />
 //               <hr />
 //               <Posts />
 //             </div>

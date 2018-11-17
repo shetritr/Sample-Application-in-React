@@ -8,10 +8,10 @@ const Navber = () => {
       </div>
       <ul className="right">
         <li>
-          <a href="/home">Home</a>
+          <a href="/Category">Category</a>
         </li>
         <li>
-          <a href="/about">About</a>
+          <a href="/Location">Location</a>
         </li>
       </ul>
     </nav>
