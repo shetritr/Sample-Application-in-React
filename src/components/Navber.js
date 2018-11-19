@@ -1,6 +1,7 @@
 import React from "react";
+import { Link, withRouter } from "react-router-dom";
 
-const Navber = () => {
+const Navber = props => {
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
@@ -8,14 +9,14 @@ const Navber = () => {
       </div>
       <ul className="right">
         <li>
-          <a href="/Category">Category</a>
+          <Link to="/Category">Category</Link>
         </li>
         <li>
-          <a href="/Location">Location</a>
+          <Link to="/Location">Location</Link>
         </li>
       </ul>
     </nav>
   );
 };
 
-export default Navber;
+export default withRouter(Navber);

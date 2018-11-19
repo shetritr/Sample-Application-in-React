@@ -6,6 +6,8 @@ import Route from "react-router-dom/Route";
 import Navber from "./Navber";
 import Location from "./Location";
 import Category from "./Category";
+import CategoryEdit from "./categoryedit";
+
 import store from "../store";
 
 class App extends Component {
@@ -17,6 +19,7 @@ class App extends Component {
             <Navber />
             <Route exact path="/Category" component={Category} />
             <Route exact path="/Location" component={Location} />
+            <Route path="/Category/:edit_id" component={CategoryEdit} />
           </div>
         </Router>
       </Provider>
@@ -32,7 +35,7 @@ export default App;
 // import Route from "react-router-dom/Route";
 
 // import Posts from "./posts";
-// import locationform from "./locationform";
+// import categoryform from "./categoryform";
 
 // import store from "../store";
 
@@ -46,7 +49,7 @@ export default App;
 //               <header>
 //                 <h1>My App</h1>
 //               </header>
-//               <locationform />
+//               <categoryform />
 //               <hr />
 //               <Posts />
 //             </div>

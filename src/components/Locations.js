@@ -1,25 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-
-import {
-  fetchPosts,
-  deleteCategory,
-  editCategory
-} from "../actions/postAction";
+import { fetchPosts } from "../actions/postAction";
 
 class posts extends Component {
-  handleDelete = e => {
-    this.props.deleteCategory(e.target.id);
-  };
-  handleEdit = e => {
-    this.props.editCategory(e.target.id);
-  };
   componentDidMount() {
     this.props.fetchPosts();
   }
   componentWillReceiveProps(nextProps) {
+    this.props.fetchPosts();
+
     if (nextProps.newPost) this.props.posts.unshift(nextProps.newPost);
   }
 
@@ -34,14 +24,6 @@ class posts extends Component {
         <h3>
           {index + 1} : {post.name}
         </h3>
-        <div className="center">
-          <button className="btn grey" onClick={this.handleDelete} id={index}>
-            Delete
-          </button>
-          <Link to={`/Category/${index}`} className="btn grey" id={index}>
-            Edit
-          </Link>
-        </div>
       </div>
     ));
 
@@ -56,8 +38,6 @@ class posts extends Component {
 
 posts.PropTypes = {
   fetchPosts: PropTypes.func.isRequired,
-  deleteCategory: PropTypes.func.isRequired,
-  editCategory: PropTypes.func.isRequired,
   posts: PropTypes.array.isRequired,
   newPost: PropTypes.object
 };
@@ -68,8 +48,7 @@ const mapStateToProps = state => {
     newPost: state.posts.item
   };
 };
-
 export default connect(
   mapStateToProps,
-  { fetchPosts, deleteCategory, editCategory }
+  { fetchPosts }
 )(posts);

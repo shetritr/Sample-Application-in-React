@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Posts from "./posts";
-import LocationForm from "./locationform";
+import CategoryForm from "./categoryform";
 
 class Category extends Component {
   render() {
@@ -11,7 +11,7 @@ class Category extends Component {
           <header>
             <h1>My App</h1>
           </header>
-          <LocationForm />
+          <CategoryForm />
           <hr />
           <Posts />
         </div>
