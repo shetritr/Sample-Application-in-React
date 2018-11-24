@@ -1,35 +1,4 @@
 import React, { Component } from "react";
-// import GoogleMapReact from "google-map-react";
-
-// class SimpleMap extends Component {
-//   static defaultProps = {
-//     center: {
-//       lat: 0,
-//       lng: 0
-//     },
-//     zoom: 11
-//   };
-
-//   render() {
-//     return (
-//       // Important! Always set the container height explicitly
-//       <div style={{ height: "100vh", width: "100%" }}>
-//         <GoogleMapReact
-//           className="container karta"
-//           bootstrapURLKeys={{
-//             key: "AIzaSyBtNLJsO8fqxd6aCBMdi2tEiHMjLx3MtKE",
-//             language: "en"
-//           }}
-
-//           defaultCenter={{ lat: 0, lng: 0 }}
-//           defaultZoom={11}
-//         />
-//       </div>
-//     );
-//   }
-// }
-
-// export default SimpleMap;
 
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 function sleep(milliseconds) {
@@ -74,5 +43,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyBtNLJsO8fqxd6aCBMdi2tEiHMjLx3MtKE"
+  apiKey: "api key"
 })(MapContainer);
