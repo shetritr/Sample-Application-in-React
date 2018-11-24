@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Posts from "./posts";
+import Categories from "./categories";
 import CategoryForm from "./categoryform";
 
 class Category extends Component {
@@ -13,7 +13,7 @@ class Category extends Component {
           </header>
           <CategoryForm />
           <hr />
-          <Posts />
+          <Categories />
         </div>
       </div>
     );

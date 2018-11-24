@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { connect } from "react-redux";
-import { editCategory } from "../actions/postAction";
+import { editCategory } from "../actions/categoryActions";
 
 class CategoryEdit extends Component {
   constructor(props) {
@@ -10,16 +10,20 @@ class CategoryEdit extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+  componentWillMount = () => {
+    this.state = this.props.category;
+  };
+
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
   onSubmit(e) {
     e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
-    const post = {
+    const category = {
       name: this.state.name
     };
-    this.props.editCategory(this.props.id, post);
+    this.props.editCategory(this.props.id, category);
     this.props.history.push("/Category");
   }
   render() {
@@ -46,14 +50,16 @@ class CategoryEdit extends Component {
     );
   }
 }
-CategoryEdit.PropTypes = {
-  editCategory: PropTypes.func.isRequired
+CategoryEdit.propTypes = {
+  editCategory: propTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
   let id = ownProps.match.params.edit_id;
+
   return {
-    id: id
+    id: id,
+    category: state.categories.categories[id]
   };
 };
 export default connect(

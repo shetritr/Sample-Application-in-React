@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { connect } from "react-redux";
-import { createCategory } from "../actions/postAction";
+import { createCategory } from "../actions/categoryActions";
 
 class CategoryForm extends Component {
   constructor(props) {
@@ -17,37 +17,41 @@ class CategoryForm extends Component {
   onSubmit(e) {
     e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
-    const post = {
+    const category = {
       name: this.state.name
     };
-    this.props.createCategory(post);
+    this.props.createCategory(category);
   }
   render() {
     return (
-      <div>
+      <div class="row">
         <h1>Add Category</h1>
         <form onSubmit={this.onSubmit}>
-          <div className="row">
+          <div>
             <div className="input-field col s6">
               <label>Category Name</label>
               <br />
               <input
                 type="text"
                 name="name"
+                class="validate"
                 onChange={this.onChange}
                 value={this.state.name}
+                required
               />
             </div>
           </div>
           <br />
-          <button type="submit">Submit</button>
+          <button className="btn grey" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     );
   }
 }
-CategoryForm.PropTypes = {
-  createCategory: PropTypes.func.isRequired
+CategoryForm.propTypes = {
+  createCategory: propTypes.func.isRequired
 };
 
 export default connect(

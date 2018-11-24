@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import Route from "react-router-dom/Route";
 
 import Navber from "./Navber";
-import Location from "./Location";
+import Location from "./Locations/Location";
 import Category from "./Category";
 import CategoryEdit from "./categoryedit";
+import ViewLocation from "./Locations/viewlocation";
+import EditLocation from "./Locations/editlocation";
 
 import store from "../store";
 
@@ -19,7 +21,13 @@ class App extends Component {
             <Navber />
             <Route exact path="/Category" component={Category} />
             <Route exact path="/Location" component={Location} />
-            <Route path="/Category/:edit_id" component={CategoryEdit} />
+            <Route exact path="/Category/:edit_id" component={CategoryEdit} />
+            <Route exact path="/Location/:view_id" component={ViewLocation} />
+            <Route
+              exact
+              path="/Location/edit/:view_id"
+              component={EditLocation}
+            />
           </div>
         </Router>
       </Provider>
@@ -34,7 +42,7 @@ export default App;
 // import { BrowserRouter as Router, Link } from "react-router-dom";
 // import Route from "react-router-dom/Route";
 
-// import Posts from "./posts";
+// import categories from "./categories";
 // import categoryform from "./categoryform";
 
 // import store from "../store";
@@ -51,7 +59,7 @@ export default App;
 //               </header>
 //               <categoryform />
 //               <hr />
-//               <Posts />
+//               <categories />
 //             </div>
 //           </div>
 //         </Router>

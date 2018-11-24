@@ -13,6 +13,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-preset-stage-2": "^6.24.1",
+    "google-map-react": "^1.1.1",
+    "google-maps-react": "^2.0.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.1.1",

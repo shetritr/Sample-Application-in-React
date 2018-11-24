@@ -1,15 +1,19 @@
-import { FETCH_POSTS, NEW_POST, DELETE_CATEGORY, EDIT_CATEGORY } from "./types";
-var customData = [];
+import {
+  FETCH_CATEGORIES,
+  NEW_CATEGORY,
+  DELETE_CATEGORY,
+  EDIT_CATEGORY
+} from "./types";
 
-export const fetchPosts = () => dispatch => {
+export const fetchcategories = () => dispatch => {
   dispatch({
-    type: FETCH_POSTS
+    type: FETCH_CATEGORIES
   });
 };
-export const createCategory = postData => dispatch => {
+export const createCategory = categoryData => dispatch => {
   dispatch({
-    type: NEW_POST,
-    payload: postData
+    type: NEW_CATEGORY,
+    payload: categoryData
   });
 };
 export const deleteCategory = index => dispatch => {

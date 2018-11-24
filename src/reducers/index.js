@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import postReducer from "./postReducer";
+import categoryReducer from "./categoryReducer";
+import locationReducer from "./locationReducer";
 
 export default combineReducers({
-  posts: postReducer
+  categories: categoryReducer,
+  locations: locationReducer
 });
