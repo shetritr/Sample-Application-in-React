@@ -10,13 +10,13 @@ const initialState = {
     {
       Address: "Hagas 5",
       Category: "Home",
-      Coordinates: "31.743540,34.978831",
+      Coordinates: "31.743540, 34.978831",
       name: "Home"
     },
     {
       Address: "Ben Gurion 1, Beer Sheva",
       Category: "University",
-      Coordinates: "31.262823,34.800680",
+      Coordinates: "31.262823, 34.800680",
       name: "University"
     }
   ],

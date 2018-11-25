@@ -62,9 +62,9 @@ class LocationForm extends Component {
                 name="Coordinates"
                 class="validate"
                 onChange={this.onChange}
-                placeholder="XX.xxxxxx,XX.xxxxxx"
+                placeholder="XX.xxxxxx, XX.xxxxxx"
                 pattern="[0-9]{2}.[0-9]{6}, [0-9]{2}.[0-9]{6}"
-                title="Coordinates number of form XX.XXXXXX,XX.XXXXXX required"
+                title="Coordinates number of form XX.XXXXXX, XX.XXXXXX required"
                 required
               />
             </div>
